@@ -6,7 +6,7 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/fsl_uart_freertos.c
 )
 
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PRIVATE
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/.
 )
 
@@ -29,8 +29,14 @@ endif()
 if(${MCUX_DEVICE} STREQUAL "MK22F51212")
     include(middleware_freertos-kernel_MK22F51212)
 endif()
+if(${MCUX_DEVICE} STREQUAL "MKM34ZA5")
+    include(middleware_freertos-kernel_MKM34ZA5)
+endif()
 if(${MCUX_DEVICE} STREQUAL "MKM35Z7")
     include(middleware_freertos-kernel_MKM35Z7)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MKM34Z7")
+    include(middleware_freertos-kernel_MKM34Z7)
 endif()
 if(${MCUX_DEVICE} STREQUAL "MKL27Z644")
     include(middleware_freertos-kernel_MKL27Z644)

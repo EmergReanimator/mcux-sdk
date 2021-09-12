@@ -6,7 +6,7 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/fsl_lpspi_freertos.c
 )
 
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PRIVATE
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/.
 )
 
@@ -22,12 +22,6 @@ if(${MCUX_DEVICE} STREQUAL "MKE15Z7")
 endif()
 if(${MCUX_DEVICE} STREQUAL "MKE16Z4")
     include(middleware_freertos-kernel_MKE16Z4)
-endif()
-if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core0")
-    include(middleware_freertos-kernel_MIMX8QM6_cm4_core0)
-endif()
-if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core1")
-    include(middleware_freertos-kernel_MIMX8QM6_cm4_core1)
 endif()
 if(${MCUX_DEVICE} STREQUAL "MIMXRT1021")
     include(middleware_freertos-kernel_MIMXRT1021)
@@ -52,6 +46,12 @@ if(${MCUX_DEVICE} STREQUAL "K32L2A41A")
 endif()
 if(${MCUX_DEVICE} STREQUAL "MIMXRT1015")
     include(middleware_freertos-kernel_MIMXRT1015)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core0")
+    include(middleware_freertos-kernel_MIMX8QM6_cm4_core0)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core1")
+    include(middleware_freertos-kernel_MIMX8QM6_cm4_core1)
 endif()
 
 include(driver_lpspi)

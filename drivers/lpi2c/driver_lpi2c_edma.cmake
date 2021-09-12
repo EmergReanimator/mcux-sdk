@@ -6,7 +6,7 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/fsl_lpi2c_edma.c
 )
 
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PRIVATE
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/.
 )
 
@@ -19,15 +19,6 @@ if(${MCUX_DEVICE} STREQUAL "MIMXRT1064")
 endif()
 if(${MCUX_DEVICE} STREQUAL "MKE15Z7")
     include(driver_edma)
-endif()
-if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core0")
-    include(driver_dma3)
-endif()
-if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core1")
-    include(driver_dma3)
-endif()
-if(${MCUX_DEVICE} STREQUAL "MIMX8QX6")
-    include(driver_dma3)
 endif()
 if(${MCUX_DEVICE} STREQUAL "MIMXRT1021")
     include(driver_edma)
@@ -55,6 +46,15 @@ if(${MCUX_DEVICE} STREQUAL "K32L2A41A")
 endif()
 if(${MCUX_DEVICE} STREQUAL "MIMXRT1015")
     include(driver_edma)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core0")
+    include(driver_dma3)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MIMX8QM6_cm4_core1")
+    include(driver_dma3)
+endif()
+if(${MCUX_DEVICE} STREQUAL "MIMX8QX6")
+    include(driver_dma3)
 endif()
 
 include(driver_lpi2c)

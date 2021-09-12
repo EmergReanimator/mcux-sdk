@@ -64,6 +64,7 @@ list(APPEND CMAKE_MODULE_PATH
     ${CMAKE_CURRENT_LIST_DIR}/../../drivers/tstmr
     ${CMAKE_CURRENT_LIST_DIR}/../../drivers/wdog32
     ${CMAKE_CURRENT_LIST_DIR}/../../middleware/mmcau
+    ${CMAKE_CURRENT_LIST_DIR}/../../../middleware/multicore
     ${CMAKE_CURRENT_LIST_DIR}/../../../rtos/freertos/freertos_kernel
     ${CMAKE_CURRENT_LIST_DIR}/../../utilities/assert
     ${CMAKE_CURRENT_LIST_DIR}/../../utilities/debug_console
@@ -91,10 +92,12 @@ list(APPEND CMAKE_MODULE_PATH
 #    include(driver_display-common)
 #    include(driver_lpuart_edma)
 #    include(driver_srtm_freertos)
+#    include(middleware_multicore_rpmsg_lite_imx8qx_m4_freertos)
 #    include(driver_codec)
 #    include(utilities_misc_utilities)
 #    include(CMSIS_Include_core_cm4)
 #    include(component_serial_manager)
+#    include(middleware_multicore_rpmsg_lite)
 #    include(component_codec_i2c_MIMX8QX6)
 #    include(component_serial_manager_uart)
 #    include(driver_esai_edma)
@@ -135,6 +138,7 @@ list(APPEND CMAKE_MODULE_PATH
 #    include(driver_camera-device-max9286)
 #    include(middleware_freertos-kernel_MIMX8QX6)
 #    include(utility_assert_lite)
+#    include(driver_srtm_MIMX8QX6)
 #    include(driver_flexcan)
 #    include(utility_debug_console)
 #    include(driver_display-adv7535)
@@ -147,7 +151,6 @@ list(APPEND CMAKE_MODULE_PATH
 #    include(driver_flexspi)
 #    include(driver_display-it6263)
 #    include(driver_lpi2c_freertos)
-#    include(driver_srtm)
 #    include(driver_ci_pi)
 #    include(driver_sai_edma)
 #    include(component_lists)
