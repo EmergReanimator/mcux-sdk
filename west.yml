@@ -22,7 +22,7 @@ manifest:
 
   projects:
     - name: mcux-sdk-examples
-      revision: e966f86e1928d99d2ee313b67abbfa83b8026567
+      revision: 80f4d8fcc809a5a4ed766bc6ee8db3844eaf6b52
       path: examples
     - name: FreeRTOS-Kernel
       revision: MCUX_2.10.0
